@@ -9,4 +9,5 @@ the 6-digit OTP code from a YubiKey and paste it into the OTP field during authe
 # Azure Active Directory Authentication flow
 There is no API for authentication so the users are reuqired to navigate the web interface. The current flow looks like this:
 
-<SCREENSHOT_HERE>
+![alt text](AzureAD-Flow.png "Azure AD Authentication Flow on Android")
+
