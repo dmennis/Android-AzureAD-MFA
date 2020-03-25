@@ -1,10 +1,11 @@
 # Android-AzureAD-MFA
-Description: Android (Kotlin) client application using WebView to authenticate a user to Azure Active Directory with MFA
+Description: 
+Android (Kotlin) client application using WebView/MSAL/ADAL to authenticate a user to Azure Active Directory with MFA. 
 
 ## Goal
-Create a native Android client to non-interactively authenticate a user to Azure Active Directory with MFA. Since the Android WebView
-does not support FIDO2, the initial phase is to enable TOTP as the MFA for the users but have this client automate the retrieval of 
-the 6-digit OTP code from a YubiKey and paste it into the OTP field during authentication to Azure Active Directory using this login: https://myprofile.microsoft.com
+Overall goal: An Android app that can securely authenticate a user to Azure Active Directory using WebAuthn.
+
+Create a native Android client to non-interactively authenticate a user to Azure Active Directory with MFA. Since the Android WebView does not support FIDO2, the initial phase is to enable TOTP as the MFA for the users but have this client automate the retrieval of the 6-digit OTP code from a YubiKey and paste it into the OTP field during authentication to Azure Active Directory using this login: https://myprofile.microsoft.com
 
 ## Considerations
 1. Use the built-in [WebView](https://developer.android.com/reference/android/webkit/WebView) from android.webkit.WebView Class and automate the input for username + password + OTP or just automate the retrieval of the OTP from YubiKey OATH and paste the 6-digit code into the field as shown in screen #3 below.
